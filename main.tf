@@ -189,7 +189,9 @@ module "blog_alb" {
       protocol         = "HTTP"
       port             = 80
       target_type      = "instance"
+      /* comment out for autoscaling
       target_id        = aws_instance.blog.id
+      */
     }
   }
 
