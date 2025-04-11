@@ -65,6 +65,9 @@ module "autoscaling" {
 
 module "blog_alb" {
   source = "terraform-aws-modules/alb/aws"
+  version = "~> 6.0"
+
+  load_balancer_type = "application"
 
   name    = "${var.environment.name}-blog-alb"
   vpc_id  = module.blog_vpc.vpc_id
